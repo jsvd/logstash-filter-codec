@@ -50,7 +50,7 @@ class LogStash::Filters::Codec < LogStash::Filters::Base
       yield LogStash::Event.new(@target => @codec.encode(event))
     else # decode
       # TODO: allow merging of the original event and the decoded event
-      @codec.decode(event[@source]) do |event|
+      @codec.decode(event.get(@source)) do |event|
         yield event
       end
     end

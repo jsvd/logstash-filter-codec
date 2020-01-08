@@ -16,7 +16,7 @@ class LogStash::Filters::Codec < LogStash::Filters::Base
   # }
   #
   config_name "codec"
-  
+
   # Which codec to use. e.g. "dots", "json"
   config :codec, :validate => :codec, :required => true
 

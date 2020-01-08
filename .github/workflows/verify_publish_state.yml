@@ -2,7 +2,7 @@ name: Verify presence of version bump
 
 on:
   pull_request:
-    types: [opened, edited]
+    types: [opened, edited, synchronize]
 
 jobs:
   build:

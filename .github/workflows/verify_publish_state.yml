@@ -15,4 +15,5 @@ jobs:
         ruby-version: 2.x
     - name: Run ruby script
       run: |
-        ruby -e "puts 'hey'"
+        ruby -e "puts ENV.inspect"
+        ls -lha

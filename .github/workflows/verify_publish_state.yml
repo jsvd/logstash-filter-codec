@@ -9,5 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo "Plugin may have changed version"
+    - name: Set up Ruby 2.x
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.x
+    - name: Run ruby script
+      run: |
+        ruby -e "puts 'hey!"'

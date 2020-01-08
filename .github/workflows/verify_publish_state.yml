@@ -1,4 +1,4 @@
-name: Verify presence of version bump
+name: Verify presence of version bumps
 
 on:
   pull_request:

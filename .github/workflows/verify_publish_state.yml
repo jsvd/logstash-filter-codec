@@ -1,0 +1,13 @@
+name: Verify presence of version bump
+
+on:
+  pull_request:
+    types: [opened, edited]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: echo "Plugin may have changed version"

@@ -29,7 +29,7 @@ class LogStash::Filters::Codec < LogStash::Filters::Base
   # of the filtered event are passed to the decode function of the codec,
   # and a new event is generated as a result. The original event is canceled.
   config :mode, :validate => ["encode", "decode"], :required => true
-
+  
   # Only relevant if mode is decode.
   # Name of the field in the event from where to extract data to be decoded.
   config :source, :validate => :string, :default => "message"
@@ -45,7 +45,6 @@ class LogStash::Filters::Codec < LogStash::Filters::Base
 
   public
   def filter(event)
-
     if @mode == "encode" then
       yield LogStash::Event.new(@target => @codec.encode(event))
     else # decode

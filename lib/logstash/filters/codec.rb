@@ -53,7 +53,7 @@ class LogStash::Filters::Codec < LogStash::Filters::Base
         yield event
       end
     end
-
+ 
     # either in encode or decode mode we generate a new event
     # so the original one can be cancelled
     event.cancel

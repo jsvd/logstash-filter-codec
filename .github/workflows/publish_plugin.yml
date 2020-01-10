@@ -16,4 +16,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: jsvd/logstash-plugin-action-publish@master
+    - name: Install devutils
+      run: gem install logstash-devutils
+    - name: Vendor
+      run: rake vendor
+    - name: Build gem
+      run: gem build *.gemspec
+    - name: Publish gem
+      run: echo "publish"

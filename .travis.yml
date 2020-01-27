@@ -1,1 +1,2 @@
-import: jsvd/.ci:travis_template.yml@master
+---
+import: jsvd/ci:travis_template.yml@master

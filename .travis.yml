@@ -1,2 +1,9 @@
----
+sudo: required
+services: docker
+addons:
+  apt:
+    packages:
+    - docker-ce
 import: jsvd/ci:travis_template.yml@master
+install: ci/unit/docker-setup.sh
+script: ci/unit/docker-run.sh

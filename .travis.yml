@@ -1,2 +1,1 @@
-imports:
-  - jsvd/.ci:.travis.yml.example
+import: jsvd/.ci:.travis.yml.example

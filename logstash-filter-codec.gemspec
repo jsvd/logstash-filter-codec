@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'logstash-filter-codec'
-  s.version         = '0.0.1.alpha2'
+  s.version         = '0.0.1.alpha1'
   s.licenses = ['Apache License (2.0)']
   s.summary = "This filter has a simple purpose of using a codec for encoding or encoding data"
   s.description = "This gem is a logstash plugin required to be installed on top of the Logstash core pipeline using $LS_HOME/bin/plugin install gemname. This gem is not a stand-alone program"
@@ -21,4 +21,5 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "logstash-core-plugin-api", ">= 1.60", "<= 2.99"
   s.add_development_dependency "rspec", "~> 3"
   s.add_development_dependency "logstash-codec-json"
+  s.add_development_dependency "logstash-devutils"
 end
